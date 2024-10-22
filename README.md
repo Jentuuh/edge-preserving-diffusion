@@ -1,4 +1,4 @@
-# Edge-preserving diffusion 
+# Edge-preserving noise for diffusion models
 This repository contains the code for our paper:
 
 > **Edge-preserving noise for diffusion models** | [[Project Page]](https://edge-preserving-diffusion.mpi-inf.mpg.de/)
