@@ -21,7 +21,7 @@ The following are tested on Linux, with an NVIDIA GeForce RTX 3090 and CUDA 11.8
 
 First, make sure you install Anaconda [here](https://docs.anaconda.com/anaconda/install/) if you haven't. Then simply run the following command, which should create and initialize an environment with the required dependencies installed:
 ```
-    conda create --name <YOUR_ENVIRONMENT_NAME> --file requirements.txt
+conda create --name <YOUR_ENVIRONMENT_NAME> --file requirements.txt
 ```
 
 ## 🗝️ Usage
@@ -30,12 +30,12 @@ We provide minimalistic code for both vanilla DDPM as well as the proposed edge-
 
 ### 🚀 Training example
 ```
-    python3 train.py --config configs/afhq_cat_128/afhq_cat_config.py --workdir ./experiments/cat_training_example --datadir <PATH_TO_YOUR_DATASET> --method "ddpm" 
+python3 train.py --config configs/afhq_cat_128/afhq_cat_config.py --workdir ./experiments/cat_training_example --datadir <PATH_TO_YOUR_DATASET> --method "ddpm" 
 ```
 
 ### 🧪 Sampling example
 ```
-    python3 sample.py --config configs/afhq_cat_128/afhq_cat_config.py --checkpointdir <PATH_TO_YOUR_CHECKPOINT_FILE> --savedir ./samples/cat_sampling_example --method "ours" --n_samples 5 --batch_size 1
+python3 sample.py --config configs/afhq_cat_128/afhq_cat_config.py --checkpointdir <PATH_TO_YOUR_CHECKPOINT_FILE> --savedir ./samples/cat_sampling_example --method "ours" --n_samples 5 --batch_size 1
 ```
 
 ## 👍 Citation
