@@ -7,7 +7,7 @@ This repository contains the code for our paper:
 > 
 > ArXiv, 2024
 
-![teaser](assets/teaser.jpg)
+![teaser](assets/teaser.png)
 
 ## 📂 Code structure
 
