@@ -5,7 +5,7 @@ import cv2
 from pathlib import Path
 from PIL import Image
 import numpy as np
-from torchvision.utils import make_grid, save_image, save_float_image
+from torchvision.utils import make_grid, save_image 
 from utils.unet import UNetModel
 import torch.nn.functional as F
 import re
@@ -96,15 +96,6 @@ def save_png(save_dir, data, name, nrow=None):
     image_grid = make_grid(data, nrow, padding=2)
     with open(os.path.join(save_dir, name), "wb") as fout:
         save_image(image_grid, fout)
-
-def save_exr(save_dir, data, name, nrow=None):
-    """Save tensor 'data' as a EXR"""
-    if nrow == None:
-        nrow = int(np.sqrt(data.shape[0]))
-    image_grid = make_grid(data, nrow, padding=2)
-
-    with open(os.path.join(save_dir, name), "wb") as fout:
-        save_float_image(image_grid, fout)
 
 def torch_batch_to_np_imgs(torch_tensor):
     np_batch_array = torch_tensor.numpy().astype(np.float32)

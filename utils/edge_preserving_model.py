@@ -3,7 +3,7 @@ import numpy as np
 import decimal 
 import torch.nn as nn
 import torch.nn.functional as F
-from utils.tools import save_exr, save_png, save_video, compute_gradient
+from utils.tools import save_png, save_video, compute_gradient
 
 def extract(v, t, x_shape):
     """
