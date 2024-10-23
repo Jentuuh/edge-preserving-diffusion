@@ -13,7 +13,7 @@ This repository contains the code for our paper:
 
 * `assets/`: README assets
 * `configs/`: Configuration files. We provided the configuration files for several datasets that are preset to the configurations we used for our final experiments.
-* `utils/`: Helper files. `tools.py` contains some general tools for things like I/O and type conversions. `unet.py` and `nn.py` are borrowed from the [Improved DDPM codebase](https://github.com/openai/improved-diffusion?tab=readme-ov-file) and specify model architecture. Finally `vanilla_ddpm_model.py` and `edge_preserving_model.py` provide an implementation of vanilla DDPM and our edge-preserving model, respectively.
+* `utils/`: Helper files. `tools.py` contains some general tools for things like I/O and type conversions. `unet.py` and `nn.py` are borrowed from the [Improved DDPM codebase](https://github.com/openai/improved-diffusion?tab=readme-ov-file) and specify model architecture. Finally, `vanilla_ddpm_model.py` and `edge_preserving_model.py` provide an implementation of vanilla DDPM and our edge-preserving model, respectively.
 * Finally, the files `train.py` and `sample.py` provide a minimalistic implementation of a training and sampling loop. We provide examples of how to use these scripts below.
  
 ## 🛠️ Installation
