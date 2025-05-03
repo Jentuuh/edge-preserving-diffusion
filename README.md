@@ -5,7 +5,7 @@ This repository contains the code for our paper:
 >
 > Jente Vandersanden, Sascha Holl, Xingchang Huang, Gurprit Singh
 > 
-> ArXiv, 2024
+> [ICLR 2025 DeLTa Workshop]
 
 ![teaser](assets/teaser.png)
 
