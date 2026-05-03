@@ -28,6 +28,8 @@ conda create --name ep-diffusion --file requirements.txt
 
 We provide minimalistic code for both vanilla DDPM as well as the proposed edge-preserving model, for convenient comparison. To train/sample with DDPM, specify flag `--method "ddpm"`. To use the edge-preserving model, specify `--method "ours"`. 
 
+For training, `--datadir` should point to a dataset directory in `torchvision.datasets.ImageFolder` format, i.e. a root folder containing at least one class subfolder with the images inside it. Common image formats supported by PIL/torchvision such as `.png`, `.jpg`, and `.jpeg` can be used.
+
 ### 🚀 Training example
 ```
 python3 train.py --config configs/afhq_cat_128/afhq_cat_config.py --workdir ./experiments/cat_training_example --datadir <PATH_TO_YOUR_DATASET> --method "ddpm" 
