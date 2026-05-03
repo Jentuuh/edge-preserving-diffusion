@@ -23,7 +23,7 @@ flags.mark_flags_as_required(["checkpointdir", "savedir", "config", "n_samples",
 
 
 def main(argv):
-    assert FLAGS.method == "ours" or FLAGS.method =="ddpm" or FLAGS.method == "ours_linear", "--method flag should be 'ours', 'ours_linear' or 'ddpm'."
+    assert FLAGS.method == "ours" or FLAGS.method =="ddpm", "--method flag should be 'ours' or 'ddpm'."
     sample(FLAGS.config, FLAGS.method, FLAGS.checkpointdir, FLAGS.savedir, FLAGS.n_samples, FLAGS.batch_size)
 
 def sample(config, METHOD, CHECKPOINT_DIR, SAVE_DIR, NUM_SAMPLES, BATCH_SIZE):

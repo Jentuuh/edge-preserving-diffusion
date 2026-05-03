@@ -49,8 +49,8 @@ def train(config, METHOD, DATA_PATH, WORK_DIR):
     model_fn_eval = model_fn_wrapper(model, train=False)
 
     if METHOD == "ours":
-        training_module = edge_preserving_diffusion_trainer(config, model_fn_train, cosine_transition_scheme, device)
-        sampling_module = edge_preserving_sampler(config, model_fn_eval, cosine_transition_scheme, device)
+        training_module = edge_preserving_diffusion_trainer(config, model_fn_train, linear_transition_scheme, device)
+        sampling_module = edge_preserving_sampler(config, model_fn_eval, linear_transition_scheme, device)
     elif METHOD == "ddpm":
         training_module = ddpm_diffusion_trainer(config, model_fn_train, device)
         sampling_module = ddpm_sampler(config, model_fn_eval, device)
@@ -101,14 +101,14 @@ def train(config, METHOD, DATA_PATH, WORK_DIR):
                     save_video(work_path.joinpath(f'samples/'), full_path_noise.cpu(), "sampling_process_noise_masks.mp4")
                     
             if nb_iter % config.training.checkpoint_freq == 0:   
-                    print(f'Saving intermediate checkpoint at {nb_iter} iterations...')
-                    work_path.joinpath(f'intermediate_checkpoints/').mkdir(parents=True, exist_ok=True)
-                    state = {}
-                    state["model"] = model.state_dict()
-                    state["optimizer"] = optimizer.state_dict()
-                    state['epoch_n'] = current_epoch
-                    state['iteration_n'] = nb_iter
-                    torch.save(state, work_path.joinpath(f'intermediate_checkpoints/{config.data.dataset}_{nb_iter}.pth'))
+                print(f'Saving intermediate checkpoint at {nb_iter} iterations...')
+                work_path.joinpath(f'intermediate_checkpoints/').mkdir(parents=True, exist_ok=True)
+                state = {}
+                state["model"] = model.state_dict()
+                state["optimizer"] = optimizer.state_dict()
+                state['epoch_n'] = current_epoch
+                state['iteration_n'] = nb_iter
+                torch.save(state, work_path.joinpath(f'intermediate_checkpoints/{config.data.dataset}_{nb_iter}.pth'))
 
 if __name__ == "__main__":
     app.run(main)
