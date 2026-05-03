@@ -5,7 +5,7 @@ This repository contains the code for our paper:
 >
 > Jente Vandersanden, Sascha Holl, Xingchang Huang, Gurprit Singh
 > 
-> [ICLR 2025 DeLTa Workshop]
+> [Eurographics 2026 / ICLR 2025 DeLTa Workshop]
 
 ![teaser](assets/teaser.png)
 
@@ -21,7 +21,7 @@ The following are tested on Linux, with an NVIDIA GeForce RTX 3090 and CUDA 11.8
 
 First, make sure you install Anaconda [here](https://docs.anaconda.com/anaconda/install/) if you haven't. Then simply run the following command, which should create and initialize an environment with the required dependencies installed:
 ```
-conda create --name <YOUR_ENVIRONMENT_NAME> --file requirements.txt
+conda create --name ep-diffusion --file requirements.txt
 ```
 
 ## 🗝️ Usage
@@ -41,11 +41,14 @@ python3 sample.py --config configs/afhq_cat_128/afhq_cat_config.py --checkpointd
 ## 👍 Citation
 If you find this code useful please consider citing:
 ```
-@inproceedings{vandersanden2024edge,
-  title={Edge-preserving noise for diffusion models},
-  author={Vandersanden, Jente and Holl, Sascha and Huang, Xingchang and Singh, Gurprit},
-  booktitle={ArXiv},
-  year={2024}
+@article{article,
+        author = {Vandersanden, Jente and Holl, Sascha and Huang, Xingchang and Singh, Gurprit},
+        year = {2026},
+        month = {04},
+        pages = {},
+        title = {Edge‐preserving noise for diffusion models},
+        journal = {Computer Graphics Forum},
+        doi = {10.1111/cgf.70383}
 }
 ```
 
